@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buscar Encuestas</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <header>
+    <h1>Buscar Encuestas</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="buscar.html">Buscar Encuestas</a></li>
+        <li><a href="encuesta.html">Crear Encuesta</a></li>
+        <li><a href="login.html">Iniciar Sesión</a></li>
+        <li><a href="registro.html">Registrarse</a></li>
+        <li><a href="#" id="logout">Cerrar Sesión</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section>
+      <h2>Encuentra Encuestas Populares</h2>
+      <input type="text" id="buscar" placeholder="Buscar por título o descripción">
+      <button onclick="buscarEncuestas()">Buscar</button>
+      <div id="resultados">
+        <!-- Aquí se mostrarán los resultados de la búsqueda -->
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2024 Plataforma de Encuestas</p>
+  </footer>
+  <script src="js/buscar.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>

@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Crear Encuesta</title>
+  <title>Registro</title>
   <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
   <header>
-    <h1>Crear Nueva Encuesta</h1>
+    <h1>Registro de Usuario</h1>
     <nav>
       <ul>
         <li><a href="index.html">Inicio</a></li>
@@ -23,25 +23,24 @@
   </header>
   <main>
     <section>
-      <h2>Detalles de la Encuesta</h2>
-      <form id="encuesta-form">
-        <label for="titulo">Título:</label>
-        <input type="text" id="titulo" name="titulo" required>
-        
-        <label for="descripcion">Descripción:</label>
-        <textarea id="descripcion" name="descripcion" required></textarea>
+      <h2>Registro de Usuario</h2>
+      <form id="registro-form">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
 
-        <label for="opciones">Opciones (separadas por comas):</label>
-        <input type="text" id="opciones" name="opciones" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
 
-        <button type="submit">Crear Encuesta</button>
+        <label for="password">Contraseña:</label>
+        <input type="password" id="password" name="password" required>
+
+        <button type="submit">Registrarse</button>
       </form>
     </section>
   </main>
   <footer>
     <p>&copy; 2024 Plataforma de Encuestas</p>
   </footer>
-  <script src="js/encuesta.js"></script>
   <script src="js/auth.js"></script>
 </body>
 </html>
