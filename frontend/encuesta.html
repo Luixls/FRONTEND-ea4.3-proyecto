@@ -13,8 +13,8 @@
       <ul>
         <li><a href="index.html">Inicio</a></li>
         <li><a href="contacto.html">Contacto</a></li>
-        <li><a href="buscar.html">Buscar Encuestas</a></li>
         <li><a href="encuesta.html">Crear Encuesta</a></li>
+        <li><a href="tomar-encuesta.html">Tomar Encuesta</a></li>
         <li><a href="login.html">Iniciar Sesión</a></li>
         <li><a href="registro.html">Registrarse</a></li>
         <li><a href="#" id="logout">Cerrar Sesión</a></li>
@@ -31,8 +31,10 @@
         <label for="descripcion">Descripción:</label>
         <textarea id="descripcion" name="descripcion" required></textarea>
 
-        <label for="opciones">Opciones (separadas por comas):</label>
-        <input type="text" id="opciones" name="opciones" required>
+        <div id="preguntas">
+          <h3>Preguntas</h3>
+          <button type="button" id="agregar-pregunta">Agregar Pregunta</button>
+        </div>
 
         <button type="submit">Crear Encuesta</button>
       </form>

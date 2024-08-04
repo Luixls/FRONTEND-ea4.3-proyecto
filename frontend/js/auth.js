@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const registroForm = document.getElementById('registro-form');
   const loginForm = document.getElementById('login-form');
   const logoutButton = document.getElementById('logout');
-  const protectedPages = ['contacto.html', 'buscar.html', 'encuesta.html'];
+  const protectedPages = ['encuesta.html', 'tomar-encuesta.html', 'responder-encuesta.html', 'contacto.html', 'buscar.html'];
 
   // Redirigir a login si no está autenticado
   if (protectedPages.includes(window.location.pathname.split('/').pop())) {
