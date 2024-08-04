@@ -1,8 +1,8 @@
 {
   "name": "frontend-ea4.3-proyecto",
   "version": "1.0.0",
-  "main": "index.js",
-  "scripts": {
+  "main": "backend/server.js",
+ "scripts": {
     "start": "node backend/server.js",
     "dev": "nodemon backend/server.js"
   },
