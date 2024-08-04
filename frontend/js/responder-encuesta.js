@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       ${encuesta.preguntas.map((pregunta, index) => `
         <div class="pregunta">
           <label for="respuesta_${index}">${pregunta.titulo}</label>
-          <input type="text" placeholder="Responda aquí..." id="respuesta_${index}" name="respuesta_${index}" required>
+          <input type="text" id="respuesta_${index}" name="respuesta_${index}" required>
         </div>
       `).join('')}
     `;
@@ -38,12 +38,23 @@ async function finalizarEncuesta() {
   const encuestaId = urlParams.get('id');
   const respuestas = [];
 
+  let validacionExitosa = true;
+
   document.querySelectorAll('.pregunta input[type="text"]').forEach((input, index) => {
+    const respuesta = input.value.trim();
+    if (!respuesta) {
+      validacionExitosa = false;
+    }
     respuestas.push({
       pregunta: input.getAttribute('name'),
-      respuesta: input.value
+      respuesta
     });
   });
+
+  if (!validacionExitosa) {
+    alert('Todas las preguntas deben ser respondidas.');
+    return;
+  }
 
   try {
     const response = await fetch(`http://localhost:3000/api/encuestas/${encuestaId}/responder`, {
