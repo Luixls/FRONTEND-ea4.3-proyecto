@@ -127,7 +127,7 @@ El archivo `config.env` se utiliza para almacenar variables de entorno sensibles
    ```
 5. Iniciar el servidor:
    ```bash
-   npm run dev
+   npx nodemon app.js
    ```
 6. Acceder al frontend abriendo los archivos HTML en el navegador.
 
